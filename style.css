@@ -1,0 +1,126 @@
+/* CSS RESETS */
+html, body{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+p {
+  font-size: 16px;
+}
+
+.object-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 650px;
+  margin: 30px auto 60px;
+  padding: 30px 15px;
+  background: #fff;
+  animation-name: fadeAndSlide;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  transform: scale(0.8);
+}
+
+.object {
+  height: 500px;
+  width: 300px;
+}
+
+
+/* CUP COVER */
+.cup-cover {
+  width: 100%;
+  height: 15%;
+  position: relative;
+}
+
+.cup-cover--tip {
+  height: 15%;
+  width: 25%;
+  background: #212121;
+  border-top-left-radius: 5px;
+}
+
+.cup-cover--body {
+  /* height: 90%; */
+  /* background: #333; */
+  border-bottom: 63.75px solid #333;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  /* border-top-right-radius: 15px; */
+}
+
+
+/* CUP BODY */
+.cup-body {
+  height: 70%;
+  position: relative;
+}
+
+.cup-body .upper-half {
+  /* height: 50%; */
+  border-top: 175px solid #000;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  /* background: #000; */
+  color: #fff;
+}
+
+.cup-body .lower-half {
+  margin: 0 auto;
+  /* height: 50%; */
+  width: 90%;
+  border-top: 175px solid #c0ffee;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  /* background: #c0ffee; */
+  color: #000;
+}
+
+
+/* CUP BASE */
+.cup-base {
+  /* background: silver; */
+  /* height: 15%; */
+  border-top: 75px solid silver;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* TEXTS */
+.upper-half p {
+  position: absolute;
+  bottom: 160px;
+  left: 100px;
+  font-size: 2.5em;
+}
+
+.lower-half p {
+  position: absolute;
+  top: 180px;
+  left: 80px;
+  font-size: 2.5em;
+}
+
+
+/* ANIMATION */
+@keyframes fadeAndSlide {
+  0% {
+    transform: translateY(200px) scale(1);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
